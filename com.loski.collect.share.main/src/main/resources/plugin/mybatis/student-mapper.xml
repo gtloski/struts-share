@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.loski.collect.share.main.persistence.StudentPersistence">
+
+	<resultMap id="teacherData" type="com.loski.collect.share.main.entity.TeacherData"></resultMap>
+
+	<resultMap id="studentData" type="com.loski.collect.share.main.entity.StudentData">
+		<association property="teacher" column="teacherId" javaType="com.loski.collect.share.main.entity.TeacherData" select="selectTeacher" />
+	</resultMap>
+	
+	
+	<select id="selectById" parameterType="String" resultMap="studentData">
+		select * from tb_student ts where ts.id = #{id}
+	</select>
+	
+	<select id="selectTeacher" parameterType="String" resultMap="teacherData">
+		select * from tb_teacher tt where tt.id = #{id}
+	</select>
+	
+	<select id="selectAll" resultMap="studentData">
+		select * from tb_student
+	</select>
+</mapper>

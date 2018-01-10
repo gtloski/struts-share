@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups xmlns="http://www.isdc.ro/wro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
+	
+	<group name="common">
+		<css>classpath:ui/css/bootstrap.min.css</css>
+		<js>classpath:ui/js/jquery.js</js>
+		<js>classpath:ui/js/bootstrap.min.js</js>
+		<js>classpath:ui/js/html5shiv.js</js>
+		<js>classpath:ui/js/respond.min.js</js>
+	</group>
+	
+	<group name="tender">
+		<css>classpath:ui/css/tender.css</css>
+		<js>classpath:ui/js/tender.js</js>
+	</group>
+	
+	<group name="index">
+		<css>classpath:ui/css/index.css</css>
+		<js>classpath:ui/js/index.js</js>
+	</group>
+	
+	<group name="login">
+		<css>classpath:ui/css/login.css</css>
+		<js>classpath:ui/js/login.js</js>
+	</group>
+	
+	<group name="formValidation">
+		<css>classpath:ui/css/formvValidation.css</css>
+		<css>classpath:ui/css/font-awesome.css</css>
+		<js>classpath:ui/js/formValidation.min.js</js>
+		<js>classpath:ui/js/formValidationBootstrap.js</js>
+		<js>classpath:ui/js/zh_CN.js</js>
+		<js>classpath:ui/js/formValidation.config.js</js>
+	</group>
+	
+	<group name="validation">
+		<js>classpath:ui/js/jquery.form.js</js>
+		<js>classpath:ui/js/jquery.validate.js</js>
+		<js>classpath:ui/js/messages_zh.js</js>
+	</group>
+	
+</groups>	

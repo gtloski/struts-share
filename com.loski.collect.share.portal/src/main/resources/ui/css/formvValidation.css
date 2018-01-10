@@ -1,0 +1,77 @@
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track-piece {
+	/*background-color: #f0f0f0;*/
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #C7C7C7;
+}
+
+:hover::-webkit-scrollbar-thumb {
+	background-color: #B7B7B7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #A7A7A7;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background-color: #979797;
+}
+
+::-webkit-scrollbar-corner {
+	background-color: #f1f1f1;
+}
+
+body {
+	font-family: "微软雅黑", "Microsoft YaHei", "Helvetica Neue", Helvetica,
+		Arial, sans-serif;
+}
+
+.icon-pos-top {
+	margin-bottom: 6px;
+	display: block;
+}
+
+.icon-pos-bottom {
+	margin-top: 6px;
+	display: block;
+}
+
+.icon-pos-left {
+	margin-right: 6px;
+}
+
+.icon-pos-right {
+	margin-left: 6px;
+}
+
+.loading {
+	position: relative;
+}
+
+.loading:before {
+	content: "";
+	background: rgba(255, 255, 255, .5) url("loading.gif") no-repeat center;
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+}
+
+.modal.fade {
+	transition: all .15s linear;
+	transform: rotateX(90deg);
+}
+
+.modal.fade.in {
+	transform: rotateX(0deg);
+}

@@ -1,0 +1,9 @@
+$(function(){
+	$.getJSON("/json.jspx",function(result){
+		if(result){
+			console.log("yes");
+		}else{
+			console.log("no");
+		}
+	});
+})

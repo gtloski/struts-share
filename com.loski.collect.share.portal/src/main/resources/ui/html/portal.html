@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户登录</title>
+		<link rel="stylesheet" type="text/css" href="/wro/login.css" />
+		<link rel="stylesheet" type="text/css" href="/wro/formValidation.css" />
+		<script type="text/javascript" src="/wro/common.js"></script>
+		<script type="text/javascript" src="/wro/login.js"></script>
+	</head>
+	
+	<body>
+		<div class="">
+			<p class="">登录</p>
+			<form id = "login">
+				<table>
+					<tr>
+						<td>
+							<lable for="account">
+								账号：
+							</lable>
+						</td>
+						<td>
+							<input type="text" value="" name="account" id="account"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<lable for="password">
+								密码：
+							</lable>
+						</td>
+						<td>
+							<input type="password" value="" name="password" id="password"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a onclick = "dologin()">登录</a>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>

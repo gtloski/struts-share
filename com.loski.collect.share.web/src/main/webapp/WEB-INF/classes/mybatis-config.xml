@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 开启全局性设置懒加载 -->
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<!-- 开启按需加载 -->
+		<setting name="aggressiveLazyLoading" value="false"/>
+	</settings>
+
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<property name="dialect" value="mysql" />
+			<property name="offsetAsPageNum" value="true" />
+			<property name="rowBoundsWithCount" value="true" />
+			<property name="pageSizeZero" value="true" />
+			<property name="reasonable" value="false" />
+			<property name="params" value="pageNum=start;pageSize=limit;" />
+		</plugin>
+
+		<plugin interceptor="tk.mybatis.mapper.mapperhelper.MapperInterceptor">
+			<property name="IDENTITY" value="HSQLDB" />
+			<property name="seqFormat" value="{0}.nextval" />
+			<property name="mappers" value="tk.mybatis.mapper.common.Mapper" />
+		</plugin>
+		
+		<plugin interceptor="com.loski.collect.share.main.plugin.TestPlugin">
+			<property name="name" value="liguitian" />
+		</plugin>
+	</plugins>
+	
+	<mappers>
+		
+	</mappers>
+</configuration>

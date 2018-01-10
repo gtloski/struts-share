@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<h1>列表</h1>
+		<table>
+			<th>
+				<td>账号</td>
+				<td>密码</td>
+			</th>
+				<#if user??>
+					<tr>
+						<td>${user.account!}</td>
+						<td>${user.password!}</td>
+					</tr>
+				</#if>
+		</table>
+	</div>
+</body>
+</html>

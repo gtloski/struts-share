@@ -1,0 +1,15 @@
+.common-a{
+	text-align: center;
+	text-decoration: none;
+}
+.block-a{
+	display: block;
+}
+.white-blue{
+	background-color: #0099ff;
+	color:#fff;
+}
+.liguitian{
+	width: 100px;
+	line-height: 30px;
+}

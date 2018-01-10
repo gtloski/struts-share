@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.loski.collect.share.main.persistence.UserPersistence">
+	<resultMap id="userData" type="com.loski.collect.share.main.entity.UserData"></resultMap>
+	
+	<select id="byPassAndAcc" resultMap="userData" parameterType="Object">
+		select * from tb_user u where u.password = #{password} and u.account = #{account}
+	</select>
+	
+	
+	<insert id="batchAdd" useGeneratedKeys="true" keyProperty="id" parameterType="java.util.Map">
+		insert into tb_user(account, password)
+		values
+		<foreach collection="userList" item="item" index="index" separator=","> 
+        	(#{item.account},#{item.password}) 
+    	</foreach>
+	</insert>
+	
+	<insert id="inserUser" useGeneratedKeys="true" keyProperty="id" parameterType="Object">
+		insert into tb_user(account, password)
+		values (#{account},#{password}) 
+	</insert>
+</mapper>
